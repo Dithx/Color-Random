@@ -13,6 +13,19 @@ const colorRandom = {
 }
 const keyColor = Object.keys(colorRandom);
 const valueColor = Object.values(colorRandom);
+const hexButton = document.getElementsByClassName('hex');
+const simpleButton = document.getElementsByClassName('simple');
+let mode = 'simple';
+
+hexButton.onclick = function(){
+    mode = 'hex';
+    return mode;
+}
+
+simpleButton.onclick = function(){
+    mode ='simple' ;
+    return mode;
+}
 
 function changeBg(id, id2){
     let randomIndex = Math.floor(Math.random() * valueColor.length);
@@ -20,5 +33,9 @@ function changeBg(id, id2){
     document.getElementById(id).style.cssText = 
     `background-color: ${valueColor[randomIndex]};`
 
-    document.getElementById(id2).innerHTML = `Background Color: ${keyColor[randomIndex]}`;
+    if(mode === 'simple'){
+        document.getElementById(id2).innerHTML = `Background Color: ${keyColor[randomIndex]}`;
+    }else{
+        document.getElementById(id2).innerHTML = `Background Color: ${valueColor[randomIndex]}`;
+    }
 }
