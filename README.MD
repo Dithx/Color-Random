@@ -1,2 +1,2 @@
 # berak sekebon
-https://dithx.github.io/Color-Random/
+Preview: https://dithx.github.io/Color-Random/
