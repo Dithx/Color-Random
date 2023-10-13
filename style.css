@@ -9,7 +9,7 @@
 }
 
 .container{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family:'Courier New', Courier, monospace;
 }
 
 nav{
@@ -21,6 +21,7 @@ nav{
 .wrap-nav{
     align-self: flex-start;
     display: flex;
+    align-items: center;
     padding: 20px;
     gap:  0 20em;
     
@@ -35,7 +36,7 @@ nav{
 .switch-mode{
     display: flex;
     align-items: center;
-    gap: 0 3em;
+    gap: 0 1em;
 }
 
 .switch-mode a{
@@ -43,9 +44,12 @@ nav{
     color: #252422;
     font-size: 1.2em;
     font-weight: 600;
+    padding: 5px 10px;
+    border-radius: 5px;
 }
 
 main{
+    font-family: Arial, Helvetica, sans-serif;
     display: flex;
     height: 80vh;
     justify-content: center;
@@ -56,16 +60,22 @@ main{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-width: 30%;
     padding: 20em 0;
     gap: 3em 0;
 }
 
 #bg-text{
+    display: flex;
+    gap: 0 10px;
     background-color: #252422;
     border-radius: 10px;
     padding: 20px 30px;
     font-size: 3em;
+}
+
+#colorInfo{
+    font-weight: 600;
+    color: #0077b6;
 }
 
 .click-me{
@@ -85,6 +95,10 @@ main{
     background-color: #252422;
     color: white;
 }
+
+/* .hex:active{
+    background-color: blue;
+} */
 
 @media screen and (max-width: 740px) {
     .wrap-nav{
@@ -117,7 +131,14 @@ main{
     }
 }
 
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 380px) {
+
+    .switch-mode a{
+        font-size: 0.7em;
+        font-weight: 600;
+        padding: 5px 5px;
+        border-radius: 5px;
+    }
 
     .wrap-main{
         padding: 10px 0;
