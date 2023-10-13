@@ -86,9 +86,14 @@ main{
     color: white;
 }
 
+@media screen and (max-width: 740px) {
+    .wrap-nav{
+        gap: 0 10em;
+    }
+}
 
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 585px) {
 
     .brand{
         font-size: 1em;
